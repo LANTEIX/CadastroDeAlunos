@@ -1,0 +1,71 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="ovly_fiori_21.cadastro_de_alunos.controller.Detalhe">
+	<App>
+		<pages>
+			<Page title="Aluno 21" showNavButton="true" navButtonPress="onBack">
+				<content>
+					<ObjectHeader xmlns="sap.m" intro="{Id}" title="{path: 'FirstName', formatter: '.toUpper' }, {LastName}" id="header0">
+						<attributes>
+							<ObjectAttribute title="Nascimento" text="{path: 'BirthDate', type: 'sap.ui.model.type.DateTime', 
+							                                           formatOptions: {relative: true, UTC: true}   }" />
+							<ObjectAttribute title="Usuário" text="{UserName}"/>
+						</attributes>
+					</ObjectHeader>
+					<Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel0">
+						<headerToolbar>
+							<Toolbar id="toolbar1">
+								<Title text="Dados Administrativos"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<core:Fragment xmlns:core="sap.ui.core" fragmentName="ovly_fiori_21.cadastro_de_alunos.view.Detalhe_Form" type="XML" id="form0"/>
+							<!--            <sap.ui.layout.form:Form editable="true" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="form1">
+				                <sap.ui.layout.form:formContainers>
+				                    <sap.ui.layout.form:FormContainer title="Title" id="container1">
+				                        <sap.ui.layout.form:formElements>
+				                            <sap.ui.layout.form:FormElement label="Label" id="element1">
+				                                <sap.ui.layout.form:fields>
+				                                    <Input width="100%" id="input1"/>
+				                                </sap.ui.layout.form:fields>
+				                            </sap.ui.layout.form:FormElement>
+				                            <sap.ui.layout.form:FormElement label="Label" id="element4">
+				                                <sap.ui.layout.form:fields>
+				                                    <Input width="100%" id="input4"/>
+				                                </sap.ui.layout.form:fields>
+				                            </sap.ui.layout.form:FormElement>
+				                        </sap.ui.layout.form:formElements>
+				                    </sap.ui.layout.form:FormContainer>
+				                </sap.ui.layout.form:formContainers>
+				                <sap.ui.layout.form:layout>
+				                    <sap.ui.layout.form:ResponsiveGridLayout id="layout1"/>
+				                </sap.ui.layout.form:layout></sap.ui.layout.form:Form>-->
+						</content>
+					</Panel>
+					<Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel1">
+						<headerToolbar>
+							<Toolbar id="toolbar2">
+								<Title text="Competências"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<List noDataText="Drop list items here" id="list0">
+								<items>
+									<StandardListItem type="Navigation" title="List Item 1" description="Description text" icon="sap-icon://picture" id="item0"/>
+								</items>
+							</List>
+						</content>
+					</Panel>
+				</content>
+				<footer>
+					<Toolbar width="100%" id="toolbar3">
+						<content>
+							<Button xmlns="sap.m" text="Deletar" id="button2" icon="sap-icon://delete" type="Reject"/>
+							<ToolbarSpacer id="spacer2"/>
+							<Button xmlns="sap.m" text="Editar" id="button3" type="Accept" icon="sap-icon://edit"/>
+						</content>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

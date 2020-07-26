@@ -1,2 +1,2 @@
 # CadastroDeAlunos
-Cadastro de alunos
+Cadastro de alunos - 27/07/2020
